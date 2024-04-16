@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <title>Mad Lib</title>
     <style>
-        @import url('https://fonts.cdnfonts.com/css/nevermind-bauhaus');
+        @import url('https://fonts.cdnfonts.com/css/noto-sans-bengali');
         body {
-            font-family: 'NeverMind Bauhaus', sans-serif;
-            background-color: #e7eaf6;
+            font-family: 'Noto Sans Bengali', sans-serif;                                    
+            background-color: #E1AFD1;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 30px;
+            padding: 25px;
+            margin: 0;
         }
+
         form {
             background-color: #fff;
             padding: 20px 40px;
@@ -21,38 +23,40 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             max-width: 350px;
             width: 100%;
-            margin-bottom: 20px;
         }
-        h1, p {
-            color: black;
-            font-family: 'NeverMind Bauhaus', sans-serif;
+        h1,p{
+            font-family: 'Noto Sans Bengali', sans-serif; 
         }
         h2 {
             text-align: center;
-            color: #333;
+            color: black;
             margin-bottom: 20px;
-            font-family: 'NeverMind Bauhaus', sans-serif;
         }
-        label, input[type="text"], input[type="submit"] {
-            display: block;
-            width: 100%;
+        p{
+            font-family: 'Noto Sans Bengali', sans-serif;
         }
+                                                
         label {
+            display: block;
             margin: 10px 0 5px;
-            color: #555;
+            color: #31363F;
         }
+
         input[type="text"] {
+            width: 100%;
             padding: 8px;
             margin-bottom: 15px;
             border: 2px solid #ddd;
             border-radius: 5px;
-            box-sizing: border-box;
+            box-sizing: border-box; /* Added for box-sizing */
         }
+
         input[type="text"]:focus {
             border-color: #7a42f4;
         }
+
         input[type="submit"] {
-            background-color: #7a42f4;
+            background-color: #9CAFAA;
             color: white;
             padding: 10px 15px;
             border: none;
@@ -61,16 +65,9 @@
             width: 100%;
             margin-top: 10px;
         }
+
         input[type="submit"]:hover {
-            background-color: black;
-        }
-        #output {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            width: 350px;
-            margin-top: 20px;
+            background-color: grey;
         }
     </style>
 </head>
@@ -94,42 +91,42 @@
 
     <div>
         <h1>ADDENDUM</h1>
-        <h2><b>HTML Frontend:</b></h2>
-<P>
-<ul>
-    <li>You have an HTML form designed to submit a Mad Lib story. Users input various parts of speech (adjective, plural noun, person's name, verb, noun), which are then submitted to the server.</li>
-    <li>The form is styled using CSS for aesthetics and usability, including responsive input fields and buttons.</li>
-</ul>
-</P> 
-<h2><b>Server Setup:</b></h2>
-<p>
-    <ul>
-<li>The server is set up using Express, a popular Node.js framework for building web applications and APIs.</li>
-<li>Routes are defined for serving the HTML form (GET request) and for handling the form submission (POST request).</li>
-<li>The POST route processes the form data and generates a Mad Lib based on the user’s inputs.</li>
-    </ul>
-        </p>
-<h2><b>Package Configuration:</b></h2>
-<p>
-    <ul>
-<li>The package.json and package-lock.json files indicate dependencies and other configurations necessary for running the application.</li>
-<li>The project is dependent on Express version 4.18.2, and the server is launched using a start script defined in package.json.</li>
-    </ul>
-        </p>
-<h2><b>File Structure:</b></h2>
-<p>
-    <ul>
-<li>The use of the path module suggests that HTML files are served from a directory relative to the server script, using paths to ensure that files are correctly located regardless of the execution context.</li>
-    </ul>
-        </p>
-<h2><b>Potential Improvements/Additions:</b></h2>
-<p>
-    <ul>
-<li>Error Handling: Adding error handling on the server side to manage cases where the form data might not be sent correctly.</li>
-<li>User Feedback: Implementing client-side JavaScript to validate inputs before submission and provide immediate feedback.</li>
-<li>Enhancements: You might consider expanding the application to support multiple Mad Lib templates or storing user-generated Mad Libs in a database for later retrieval.</li>
-    </ul>
-        </p>
+    <h2><b>HTML Frontend:</b></h2>
+    <p>
+        <ul>
+            <li>An HTML form is created for submitting a Mad Lib story. Users enter various parts of speech (adjective, plural noun, person's name, verb, noun), which are then sent to the server.</li>
+            <li>CSS is used to style the form for aesthetics and usability, including responsive input fields and buttons.</li>
+        </ul>
+    </p>
+    <h2><b>Server Setup:</b></h2>
+    <p>
+        <ul>
+            <li>The server is set up with Express, a popular Node.js framework for building web applications and APIs.</li>
+            <li>Routes are defined to serve the HTML form (GET request) and handle the form submission (POST request).</li>
+            <li>The POST route processes the form data and creates a Mad Lib based on the user's inputs.</li>
+        </ul>
+    </p>
+    <h2><b>Package Configuration:</b></h2>
+    <p>
+        <ul>
+            <li>The package.json and package-lock.json files specify dependencies and other configurations required to run the application.</li>
+            <li>The project relies on Express version 4.18.2, and the server is started using a start script defined in package.json.</li>
+        </ul>
+    </p>
+    <h2><b>File Structure:</b></h2>
+    <p>
+        <ul>
+            <li>The use of the path module indicates that HTML files are served from a directory relative to the server script, ensuring correct file location regardless of the execution context.</li>
+        </ul>
+    </p>
+    <h2><b>Potential Improvements/Additions:</b></h2>
+    <p>
+        <ul>
+            <li>Error Handling: Implementing error handling on the server side to manage cases where the form data is not sent correctly.</li>
+            <li>User Feedback: Adding client-side JavaScript to validate inputs before submission and provide immediate feedback to users.</li>
+            <li>Enhancements: Considering expanding the application to support multiple Mad Lib templates or storing user-generated Mad Libs in a database for future retrieval.</li>
+        </ul>
+    </p>
     </div>
         <hr>
 <div>
