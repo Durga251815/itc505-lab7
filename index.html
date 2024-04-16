@@ -148,7 +148,8 @@
             const verb = document.getElementById('verb').value;
             const noun = document.getElementById('noun').value;
 
-            const madLib = `This night, I encountered a ${adjective} group of ${pluralNoun} that remind me of ${personName}. Consequently, I chose to ${verb} near the ${noun}.`;
+            const madLib = `Today, I saw a ${adjective} ${pluralNoun} which made me think of ${personName}. 
+                    Then I decided to ${verb} by the ${noun}.`;
 
             // Redirect to the new page with the Mad Lib result
             window.location.href = `madlib-result.html?result=${encodeURIComponent(madLib)}`;
